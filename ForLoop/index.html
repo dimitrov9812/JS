@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var array = [1,2,3,4,5,6,7,7,4,3,2,1]
+        var check = false;
+        var repeatedNum;
+        for (let i = 0; i < array.length; i++) {
+            console.log('We are at element number: ' + i);
+            console.log('And the element is: ' + array[i]);
+            if(array[i] == array[i+1]){
+                console.log('The element value that is seen many times is: ' + array[i]);
+                repeatedNum = array[i];
+                check = true;
+                break;
+            }
+        }
+        console.log('We are out of the for loop!')
+        if(check == false){
+            console.log('The loop broke naturally and no doubled elements appeared.');
+        }
+        else{
+            console.log('The number that repeated more than one time is: '+ repeatedNum);
+        }
+    </script>
+</body>
+</html>

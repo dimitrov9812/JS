@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" checked = "checked" id = 'Red'>Red
+    <input type="checkbox" checked = "checked" id = 'Yellow'>Yellow
+    <input type="checkbox" checked = "checked" id = 'Green'>Green<br>
+    <input type="text" placeholder="Enter value for x" id='xPos'><br>
+    <input type="text" placeholder="Enter value for y" id='yPos'><br>
+    <input type="text" placeholder="Enter value for Radius" id='rPos'><br>
+    <input type="button" onclick="createBubble()" value = 'Create'>
+
+    <script>
+        
+    //create random number for random possition move
+     function random(){
+        let result = Math.floor(Math.random() * 100) + 1;
+        return result;
+     }
+     //check if the color entered is Valid and return it as a string value
+     function checkColor(){
+        if(document.getElementById('Red').checked){
+
+            var color = 'red';
+            console.log(color)
+            return color;
+        }
+        else if(document.getElementById('Green').checked){
+            var color = 'green';
+            console.log(color)
+            return color;
+        }
+        else if(document.getElementById('Yellow').checked){
+            
+            var color = 'yellow';
+            console.log(color)
+            return color;
+        }
+        else{
+            var color = 'No color selected!';
+            return color;
+        }
+     }
+     //return to main page
+     function main(){
+        window.location.href = 'index.html';
+     }
+     //Create the bubble with the data given by the user in the WebSite
+     function createBubble(){
+        var x = document.getElementById('xPos').value;
+        var y = document.getElementById('yPos').value;
+        var r = document.getElementById('rPos').value;
+        var color = checkColor();
+        var bubble = new Bubble(x,y,r,color);
+        document.write('Our Bubble was created!');
+        document.write('<br \>');
+        document.write('Starting possition at: ' + x + ":" + y);
+        document.write('<br \>');
+        document.write('With radius: ' + r);
+        document.write('<br \>');
+        document.write('And color: ' + color);
+        document.write('<br \>');
+        document.write('<input type = \'button\'onClick =\'main()\' value=\'Return to Main Page\'>');
+     }
+     //Create the bubble class with it's atributes
+     class Bubble{
+        constructor(x,y,r,color){
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            this.c = color;
+        }
+        move(){
+            this.x = this.x + random();
+            this.y = this.y + random();
+        }
+        show(){
+            console.log('We are in show method');
+        }
+     }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    const object = {
+        a:1,
+        b:2,
+        c:3,
+        d:4,
+        e:5,
+        f:6,
+    }
+    var array = [
+        obj = {
+            name:'Alex',
+            age:'13',
+            talant:'Drawing'
+        },
+        obj = {
+            name:'Drake',
+            age:'16',
+            talant:'Drawing'
+        },
+        obj = {
+            name:'Peter',
+            age:'18',
+            talant:'Playing the Guitar'
+        },obj = {
+            name:'Ivan',
+            age:'21',
+            talant:'Singing'
+        },obj = {
+            name:'Sonia',
+            age:'8',
+            talant:'Dancing'
+        },
+    ]
+    for(var o in object){
+        console.log(object[o]);
+    }
+    for(var o in array){
+        document.write(array[o].name);
+        document.write('<br \>')
+        document.write(array[o].age);
+        document.write('<br \>')
+        document.write(array[o].talant);
+        document.write('<br \>')
+        document.write('<hr \>')
+    }
+
+    var str = 'enjoy';
+    for(var s of str){
+        console.log(s);
+    }
+
+    </script>
+</body>
+</html>
