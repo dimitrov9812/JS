@@ -19,6 +19,13 @@
         //declare the arrays
         const intArray = [1,2,3,4,5,6,7,8,9];
         const stringArray = ['Hello','Halo','Hi'];
+        stringArray.pop();//removes last element of array
+        stringArray.push('New Element');//appends last element of array
+        stringArray.shift(); //removes first element of the array
+        stringArray.unshift(); //adds element in the array at first index
+
+        //combining two arrays
+        const combinedArray = intArray.concat(stringArray);
         const mixedArray = [1,2,3,null,'Guten Morgen'];
         const arrayInArray = [
             [1,2,3],
@@ -30,6 +37,15 @@
         print(stringArray);
         print(mixedArray );
         print(arrayInArray);
+        print(combinedArray);
+
+
+        //same actions can be used as in string - we can slice, reverse, split
+
+        //sorting array in ascending order
+        console.log(intArray.sort(function(a,b) {return a-b}));
+        //sorting array in descending order
+        console.log(intArray.sort(function(a,b) {return b-a}));
     </script>
 </body>
 </html>
