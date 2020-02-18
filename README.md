@@ -10,3 +10,5 @@ I have learned a lot about:</h5><br/>
    -Working with dates.<br/>
    -Operations with numbers and strings.<br/>
    -Conditional statements.<br/>
+
+<h5>In future i plan to make different types of projects  to practice what i have learned and learn being agile in different types of scenarios and problems to solve.</h5>
